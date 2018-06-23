@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bash
+# ==============================================================================
+# Community Hass.io Add-ons: Octobox
+# Runs the Postgres daemon
+# ==============================================================================
+# shellcheck disable=SC1091
+source /usr/lib/hassio-addons/base.sh
+
+# Run the Postgres daemon
+hass.log.info 'Starting the Postgres database server...'
+exec s6-setuidgid postgres postgres -D /data/postgres

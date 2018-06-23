@@ -1,0 +1,40 @@
+#!/usr/bin/with-contenv bash
+# ==============================================================================
+# Community Hass.io Add-ons: Octobox
+# Runs the Redis daemon
+# ==============================================================================
+# shellcheck disable=SC1091
+source /usr/lib/hassio-addons/base.sh
+
+# Generic settings
+export OCTOBOX_DATABASE_HOST=localhost
+export OCTOBOX_DATABASE_NAME=octobox
+export OCTOBOX_DATABASE_PASSWORD="${HASSIO_TOKEN}"
+export OCTOBOX_DATABASE_USERNAME=octobox
+export SECRET_KEY_BASE="${HASSIO_TOKEN}"
+
+# GitHub App settings
+export GITHUB_CLIENT_ID=$(hass.config.get 'github_client_id')
+export GITHUB_CLIENT_SECRET=$(hass.config.get 'github_client_secret')
+
+# Whether or not to fetch subjects
+if hass.config.true 'fetch_subject'; then
+    export FETCH_SUBJECT=true
+fi
+
+# Whether or not to allow for custom personal access tokens
+if hass.config.true 'allow_personal_access_token'; then
+    export PERSONAL_ACCESS_TOKENS_ENABLED=1
+fi
+
+# Change working directory
+cd /opt
+
+# Wait for Postgres to become available
+s6-svwait -u -t 5000 /var/run/s6/services/postgres
+
+# Sync the notifications
+exec \
+    s6-sleep "$(hass.config.get 'sync_timeout')" \
+    s6-setuidgid octobox \
+        rake tasks:sync_notifications

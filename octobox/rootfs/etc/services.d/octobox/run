@@ -1,0 +1,80 @@
+#!/usr/bin/with-contenv bash
+# ==============================================================================
+# Community Hass.io Add-ons: Octobox
+# Runs Octobox
+# ==============================================================================
+# shellcheck disable=SC1091
+source /usr/lib/hassio-addons/base.sh
+
+# Generic settings
+export OCTOBOX_DATABASE_HOST=localhost
+export OCTOBOX_DATABASE_NAME=octobox
+export OCTOBOX_DATABASE_PASSWORD="${HASSIO_TOKEN}"
+export OCTOBOX_DATABASE_USERNAME=octobox
+export PGPASSWORD="${HASSIO_TOKEN}"
+export SECRET_KEY_BASE="${HASSIO_TOKEN}"
+
+# GitHub App settings
+export GITHUB_CLIENT_ID=$(hass.config.get 'github_client_id')
+export GITHUB_CLIENT_SECRET=$(hass.config.get 'github_client_secret')
+
+# Minimum refresh interval
+export MINIMUM_REFRESH_INTERVAL=$(hass.config.get 'minimal_refresh_interval')
+
+# Whether or not to fetch subjects
+if hass.config.true 'fetch_subject'; then
+    export FETCH_SUBJECT=true
+fi
+
+# Whether or not to allow for custom personal access tokens
+if hass.config.true 'allow_personal_access_token'; then
+    export PERSONAL_ACCESS_TOKENS_ENABLED=1
+fi
+
+# Restrict GitHub access if enabled
+if hass.config.true 'github_restrict_acces'; then
+    if [[ "$(hass.config.get 'github_organization_id')" = "0" ]]; then
+        export GITHUB_ORGANIZATION_ID=$(
+            hass.config.get 'github_organization_id'
+        )
+    else
+        export GITHUB_TEAM_ID=$(hass.config.get 'github_team_id')
+    fi
+fi
+
+# Force SSL in case SSL has been enabled
+if hass.config.true 'ssl'; then
+    export FORCE_SSL=true
+fi
+
+# Change working directory
+cd /opt
+
+# Wait for Postgres to become available
+s6-svwait -u -t 5000 /var/run/s6/services/postgres
+retries=60
+until \
+    psql \
+        -h "${OCTOBOX_DATABASE_HOST}" \
+        -U "${OCTOBOX_DATABASE_USERNAME}" \
+        -d "${OCTOBOX_DATABASE_NAME}" \
+        -c "select 1" > /dev/null 2>&1 \
+    || [[ $RETRIES -eq 0 ]] \
+; do
+  retries=(retries--)
+  hass.log.info "Waiting for Postgres server, ${retries} remaining attempts..."
+  sleep 1
+done
+
+# Run migrate before each start as well
+hass.log.info 'Running database migrations...'
+s6-setuidgid octobox bundle exec rake db:migrate
+
+# Sync notifications before start
+hass.log.info 'Syncing notifications...'
+s6-setuidgid octobox rake tasks:sync_notifications
+
+# Run Octobox
+export RAILS_ENV=default
+hass.log.info 'Starting Octobox...'
+exec s6-setuidgid octobox rails s -b 0.0.0.0
