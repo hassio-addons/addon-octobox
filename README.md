@@ -52,8 +52,8 @@ comparison to installing any other Hass.io add-on.
 
 1. [Add our Hass.io add-ons repository][repository] to your Hass.io instance.
 1. Install the "Octobox" add-on.
-1. Register a GitHub application, and set the `github_client_id`
-   and `github_client_secret` add-on options.
+1. [Register a GitHub application](#registering-a-github-application),
+   and set the `github_client_id` and `github_client_secret` add-on options.
 1. Start the "Octobox" add-on
 1. Check the logs of the "Octobox" add-on to see if everything went well.
 
@@ -376,28 +376,28 @@ SOFTWARE.
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
 [buymeacoffee]: https://www.buymeacoffee.com/frenck
 [commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-ocotbox.svg
-[commits]: https://github.com/hassio-addons/addon-ocotbox/commits/master
-[contributors]: https://github.com/hassio-addons/addon-ocotbox/graphs/contributors
+[commits]: https://github.com/hassio-addons/addon-octobox/commits/master
+[contributors]: https://github.com/hassio-addons/addon-octobox/graphs/contributors
 [discord-shield]: https://img.shields.io/discord/330944238910963714.svg
 [discord]: https://discord.gg/c5DvZ4e
-[dockerhub]: https://hub.docker.com/r/hassioaddons/ocotbox
+[dockerhub]: https://hub.docker.com/r/hassioaddons/octobox
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/?u=frenck
 [frenck]: https://github.com/frenck
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-octobox/badges/master/pipeline.svg
-[gitlabci]: https://gitlab.com/hassio-addons/addon-ocotbox/pipelines
+[gitlabci]: https://gitlab.com/hassio-addons/addon-octobox/pipelines
 [home-assistant]: https://home-assistant.io
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
-[issue]: https://github.com/hassio-addons/addon-ocotbox/issues
+[issue]: https://github.com/hassio-addons/addon-octobox/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
-[layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/ocotbox.svg
-[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-ocotbox.svg
+[layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/octobox.svg
+[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-octobox.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2018.svg
-[microbadger]: https://microbadger.com/images/hassioaddons/ocotbox
+[microbadger]: https://microbadger.com/images/hassioaddons/octobox
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
-[pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/ocotbox.svg
+[pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/octobox.svg
 [reddit]: https://reddit.com/r/homeassistant
-[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-ocotbox.svg
-[releases]: https://github.com/hassio-addons/addon-ocotbox/releases
+[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-octobox.svg
+[releases]: https://github.com/hassio-addons/addon-octobox/releases
 [repository]: https://github.com/hassio-addons/repository
 [semver]: http://semver.org/spec/v2.0.0.htm
