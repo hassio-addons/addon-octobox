@@ -375,7 +375,7 @@ SOFTWARE.
 [bountysource]: https://www.bountysource.com/teams/hassio-addons/issues
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
 [buymeacoffee]: https://www.buymeacoffee.com/frenck
-[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-ocotbox.svg
+[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-octobox.svg
 [commits]: https://github.com/hassio-addons/addon-octobox/commits/master
 [contributors]: https://github.com/hassio-addons/addon-octobox/graphs/contributors
 [discord-shield]: https://img.shields.io/discord/330944238910963714.svg
