@@ -4,7 +4,7 @@
   "slug": "octobox",
   "description": "Take back control of your GitHub notifications",
   "url": "https://community.home-assistant.io/?u=frenck",
-  "webui": "[PROTO:ssl]://[HOST]:[PORT:8443]",
+  "webui": "[PROTO:ssl]://[HOST]:[PORT:3333]",
   "startup": "services",
   "arch": [
     "aarch64",
