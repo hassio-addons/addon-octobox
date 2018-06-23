@@ -6,16 +6,24 @@
 # shellcheck disable=SC1091
 source /usr/lib/hassio-addons/base.sh
 
+export GITHUB_CLIENT_ID
+export GITHUB_CLIENT_SECRET
+export OCTOBOX_DATABASE_HOST
+export OCTOBOX_DATABASE_NAME
+export OCTOBOX_DATABASE_PASSWORD
+export OCTOBOX_DATABASE_USERNAME
+export SECRET_KEY_BASE
+
 # Generic settings
-export OCTOBOX_DATABASE_HOST=localhost
-export OCTOBOX_DATABASE_NAME=octobox
-export OCTOBOX_DATABASE_PASSWORD="${HASSIO_TOKEN}"
-export OCTOBOX_DATABASE_USERNAME=octobox
-export SECRET_KEY_BASE="${HASSIO_TOKEN}"
+OCTOBOX_DATABASE_HOST=localhost
+OCTOBOX_DATABASE_NAME=octobox
+OCTOBOX_DATABASE_PASSWORD="${HASSIO_TOKEN}"
+OCTOBOX_DATABASE_USERNAME=octobox
+SECRET_KEY_BASE="${HASSIO_TOKEN}"
 
 # GitHub App settings
-export GITHUB_CLIENT_ID=$(hass.config.get 'github_client_id')
-export GITHUB_CLIENT_SECRET=$(hass.config.get 'github_client_secret')
+GITHUB_CLIENT_ID=$(hass.config.get 'github_client_id')
+GITHUB_CLIENT_SECRET=$(hass.config.get 'github_client_secret')
 
 # Whether or not to fetch subjects
 if hass.config.true 'fetch_subject'; then
