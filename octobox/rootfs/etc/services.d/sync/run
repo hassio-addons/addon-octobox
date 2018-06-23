@@ -36,7 +36,7 @@ if hass.config.true 'allow_personal_access_token'; then
 fi
 
 # Change working directory
-cd /opt
+cd /opt || hass.die 'Failed switching working directory'
 
 # Wait for Postgres to become available
 s6-svwait -u -t 5000 /var/run/s6/services/postgres
