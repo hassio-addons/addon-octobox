@@ -382,7 +382,7 @@ SOFTWARE.
 [discord]: https://discord.gg/c5DvZ4e
 [dockerhub]: https://hub.docker.com/r/hassioaddons/octobox
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/?u=frenck
+[forum]: https://community.home-assistant.io/t/community-hass-io-add-on-octobox/57695?u=frenck
 [frenck]: https://github.com/frenck
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-octobox/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-octobox/pipelines
