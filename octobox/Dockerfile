@@ -22,6 +22,7 @@ RUN \
         zlib-dev=1.2.11-r1 \
     \
     && apk add --no-cache \
+        apache2-utils=2.4.33-r0 \
         bzip2=1.0.6-r6 \
         git=2.15.2-r0 \
         libsass=3.4.7-r0 \
