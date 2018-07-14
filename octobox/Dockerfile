@@ -8,7 +8,7 @@ WORKDIR /opt
 # Setup base
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        autoconf=2.69-r0 \
+        autoconf=2.69-r2 \
         bzip2-dev=1.0.6-r6 \
         curl-dev=7.60.0-r1 \
         g++=6.4.0-r5 \
