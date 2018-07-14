@@ -10,7 +10,6 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         autoconf=2.69-r2 \
         bzip2-dev=1.0.6-r6 \
-        curl-dev=7.60.0-r1 \
         g++=6.4.0-r5 \
         gcc=6.4.0-r5 \
         libsass-dev=3.4.7-r0 \
@@ -18,6 +17,7 @@ RUN \
         libxslt-dev=1.1.31-r0 \
         make=4.2.1-r0 \
         mariadb-dev=10.1.32-r0 \
+        curl-dev=7.61.0-r0 \
         postgresql-dev=10.4-r0 \
         zlib-dev=1.2.11-r1 \
     \
