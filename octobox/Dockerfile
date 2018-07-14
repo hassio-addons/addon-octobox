@@ -10,7 +10,6 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         autoconf=2.69-r2 \
         bzip2-dev=1.0.6-r6 \
-        libxslt-dev=1.1.31-r0 \
         make=4.2.1-r0 \
         mariadb-dev=10.1.32-r0 \
         curl-dev=7.61.0-r0 \
@@ -18,6 +17,7 @@ RUN \
         gcc=6.4.0-r8 \
         libsass-dev=3.5.4-r0 \
         libxml2-dev=2.9.8-r0 \
+        libxslt-dev=1.1.32-r0 \
         postgresql-dev=10.4-r0 \
         zlib-dev=1.2.11-r1 \
     \
@@ -25,11 +25,11 @@ RUN \
         apache2-utils=2.4.33-r0 \
         bzip2=1.0.6-r6 \
         git=2.15.2-r0 \
-        libxslt=1.1.31-r0 \
         nginx=1.12.2-r3 \
         nodejs=8.9.3-r1 \
         libsass=3.5.4-r0 \
         libxml2=2.9.8-r0 \
+        libxslt=1.1.32-r0 \
         postgresql-contrib=10.4-r0 \
         postgresql=10.4-r0 \
         ruby-bigdecimal@edge=2.5.1-r2 \
