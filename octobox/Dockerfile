@@ -24,9 +24,9 @@ RUN \
     && apk add --no-cache \
         apache2-utils=2.4.33-r1 \
         bzip2=1.0.6-r6 \
-        git=2.15.2-r0 \
         nginx=1.12.2-r3 \
         nodejs=8.9.3-r1 \
+        git=2.18.0-r0 \
         libsass=3.5.4-r0 \
         libxml2=2.9.8-r0 \
         libxslt=1.1.32-r0 \
