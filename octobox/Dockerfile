@@ -33,7 +33,7 @@ RUN \
         postgresql-contrib=10.5-r0 \
         postgresql=10.5-r0 \
         ruby-bigdecimal=2.5.1-r2 \
-        ruby-bundler=1.16.2-r0 \
+        ruby-bundler=1.16.2-r1 \
         ruby-dev=2.5.1-r2 \
         ruby-etc=2.5.1-r2 \
         ruby-json=2.5.1-r2 \
