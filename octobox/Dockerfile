@@ -32,7 +32,7 @@ RUN \
         libxml2=2.9.8-r0 \
         libxslt=1.1.32-r0 \
         nginx=1.14.0-r0 \
-        nodejs=8.11.3-r1 \
+        nodejs=8.11.4-r0 \
         postgresql-contrib=10.5-r0 \
         postgresql=10.5-r0 \
         ruby-bigdecimal=2.5.1-r2 \
