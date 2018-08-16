@@ -127,12 +127,16 @@ registering a new application on GitHub.
 
 For more information, please see the "Registering a GitHub application" chapter.
 
+**Note**: _This option support secrets, e.g., `!secret github_client_id`._
+
 ### Option: `github_client_secret`
 
 The GitHub application client ID for Octobox. You can get this secret by
 registering a new application on GitHub.
 
 For more information, please see the "Registering a GitHub application" chapter.
+
+**Note**: _This option support secrets, e.g., `!secret github_client_secret`._
 
 ### Option: `username`
 
@@ -149,9 +153,13 @@ to prevent users of using your installation for themselves.
 This option is HIGHLY recommended in case you expose this add-on to the outside
 world.
 
+**Note**: _This option support secrets, e.g., `!secret octobox_username`._
+
 ### Option: `password`
 
 Password for authenticating with Octobox interface.
+
+**Note**: _This option support secrets, e.g., `!secret octobox_password`._
 
 ### Option: `ssl`
 
@@ -246,6 +254,23 @@ Find your team on the list and copy its ID.
 ### Option: `ipv6`
 
 Set this option too `false` to disable IPv6 support.
+
+### Option: `i_like_to_be_pwned`
+
+Adding this option to the add-on configuration allows to you bypass the
+HaveIBeenPwned password requirement by setting it to `true`.
+
+**Note**: _We STRONGLY suggest picking a stronger/safer password instead of
+using this option! USE AT YOUR OWN RISK!_
+
+### Option: `leave_front_door_open`
+
+Adding this option to the add-on configuration allows you to disable
+authentication on the Web Terminal by setting it to `true` and leaving the
+username and password empty.
+
+**Note**: _We STRONGLY suggest, not to use this, even if this add-on is
+only exposed to your internal network. USE AT YOUR OWN RISK!_
 
 ## Registering a GitHub application
 
