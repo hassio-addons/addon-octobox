@@ -18,7 +18,7 @@ RUN \
         libxslt-dev=1.1.32-r0 \
         make=4.2.1-r2 \
         mariadb-dev=10.2.15-r0 \
-        postgresql-dev=10.4-r0 \
+        postgresql-dev=10.5-r0 \
         zlib-dev=1.2.11-r1 \
     \
     && apk add --no-cache \
@@ -30,8 +30,8 @@ RUN \
         libxslt=1.1.32-r0 \
         nginx=1.14.0-r0 \
         nodejs=8.11.3-r1 \
-        postgresql-contrib=10.4-r0 \
-        postgresql=10.4-r0 \
+        postgresql-contrib=10.5-r0 \
+        postgresql=10.5-r0 \
         ruby-bigdecimal=2.5.1-r2 \
         ruby-bundler=1.16.2-r0 \
         ruby-dev=2.5.1-r2 \
