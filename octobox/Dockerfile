@@ -46,7 +46,7 @@ RUN \
     \
     && git clone --branch master --single-branch \
         https://github.com/octobox/octobox.git /opt \
-    && git -C /opt checkout ae19b89aded61f7b9947775b7151266a4b41ebe9 \
+    && git -C /opt checkout cf113e0cab4fb8b3c2b3e91b5bf3bb50ecccb7a4 \
     \
     && bundle install \
         --without test \
