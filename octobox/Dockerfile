@@ -44,9 +44,8 @@ RUN \
         ruby=2.5.1-r2 \
         zlib=1.2.11-r1 \
     \
-    && git clone --branch master --single-branch \
+    && git clone --branch bdd77e9 --depth=1 \
         https://github.com/octobox/octobox.git /opt \
-    && git -C /opt checkout cf113e0cab4fb8b3c2b3e91b5bf3bb50ecccb7a4 \
     \
     && bundle install \
         --without test \
