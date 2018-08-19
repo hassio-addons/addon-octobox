@@ -1,2 +1,2 @@
-/data/postgres true postgres 0700 0600
+/data/postgres true postgres 0600 0700
 /run/postgresql true postgres 0775 0775
