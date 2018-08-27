@@ -20,6 +20,7 @@
     "3333/tcp": 3333
   },
   "map": [
+    "config",
     "ssl"
   ],
   "options": {
