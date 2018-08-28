@@ -2,6 +2,9 @@ ARG BUILD_FROM=hassioaddons/base:2.1.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
+# Set environment locale
+ENV LANG en_US.utf8
+
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -60,9 +63,6 @@ RUN \
     && apk del --purge \
         .build-dependencies \
         ruby-dev
-
-# TODO Move up
-ENV LANG en_US.utf8
 
 # Copy root filesystem
 COPY rootfs /
