@@ -16,7 +16,7 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         autoconf=2.69-r2 \
         bzip2-dev=1.0.6-r6 \
-        curl-dev=7.61.0-r0 \
+        curl-dev=7.61.1-r0 \
         g++=6.4.0-r8 \
         gcc=6.4.0-r8 \
         libsass-dev=3.5.4-r0 \
