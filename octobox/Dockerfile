@@ -8,10 +8,8 @@ ENV LANG en_US.utf8
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# Sets working directory
-WORKDIR /opt
-
 # Setup base
+# hadolint ignore=DL3003
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         autoconf=2.69-r2 \
@@ -50,6 +48,7 @@ RUN \
     && git clone --branch b145970 --depth=1 \
         https://github.com/octobox/octobox.git /opt \
     \
+    && cd /opt \
     && bundle install \
         --without test \
         production \
