@@ -32,10 +32,5 @@ s6-setuidgid postgres psql -v ON_ERROR_STOP=1 --username postgres <<-EOSQL
     CREATE DATABASE octobox ;
 EOSQL
 
-# Create Octobox database user
-s6-setuidgid postgres psql -v ON_ERROR_STOP=1 --username postgres <<-EOSQL
-    CREATE USER octobox WITH SUPERUSER PASSWORD '${HASSIO_TOKEN}' ;
-EOSQL
-
 # Stop server
 s6-setuidgid postgres pg_ctl -D "${PGDATA}" -m fast -w stop
