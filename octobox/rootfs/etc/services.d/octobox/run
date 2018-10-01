@@ -91,7 +91,8 @@ s6-setuidgid octobox bundle exec rake db:migrate
 
 # Sync notifications before start
 hass.log.info 'Syncing notifications...'
-s6-setuidgid octobox rake tasks:sync_notifications
+s6-setuidgid octobox rake tasks:sync_notifications \
+    || hass.log.error "Failed to sync notifications"
 
 # Run Octobox
 hass.log.info 'Starting Octobox...'
