@@ -15,8 +15,8 @@ RUN \
         autoconf=2.69-r2 \
         bzip2-dev=1.0.6-r6 \
         curl-dev=7.61.1-r0 \
-        g++=6.4.0-r8 \
-        gcc=6.4.0-r8 \
+        g++=6.4.0-r9 \
+        gcc=6.4.0-r9 \
         libsass-dev=3.5.4-r0 \
         libxml2-dev=2.9.8-r0 \
         libxslt-dev=1.1.32-r0 \
