@@ -36,6 +36,11 @@ if hass.config.true 'fetch_subject'; then
     export FETCH_SUBJECT=true
 fi
 
+# Open new links in same tab
+if hass.config.true 'open_in_same_tab'; then
+    export OPEN_IN_SAME_TAB=true
+fi
+
 # Whether or not to allow for custom personal access tokens
 if hass.config.true 'allow_personal_access_token'; then
     export PERSONAL_ACCESS_TOKENS_ENABLED=1
