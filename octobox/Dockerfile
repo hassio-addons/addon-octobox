@@ -45,7 +45,7 @@ RUN \
         ruby=2.5.1-r2 \
         zlib=1.2.11-r1 \
     \
-    && git clone --branch b145970 --depth=1 \
+    && git clone --branch 0fa9216 --depth=1 \
         https://github.com/octobox/octobox.git /opt \
     \
     && cd /opt \
