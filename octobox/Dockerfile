@@ -36,13 +36,13 @@ RUN \
         nodejs=8.14.0-r0 \
         postgresql-contrib=10.5-r0 \
         postgresql=10.5-r0 \
-        ruby-bigdecimal=2.5.3-r1 \
-        ruby-bundler=1.16.2-r1 \
-        ruby-dev=2.5.3-r1 \
-        ruby-etc=2.5.3-r1 \
-        ruby-json=2.5.3-r1 \
-        ruby-rdoc=2.5.3-r1 \
-        ruby=2.5.3-r1 \
+        ruby-bigdecimal@edge=2.5.3-r1 \
+        ruby-bundler@edge=1.16.2-r1 \
+        ruby-dev@edge=2.5.3-r1 \
+        ruby-etc@edge=2.5.3-r1 \
+        ruby-json@edge=2.5.3-r1 \
+        ruby-rdoc@edge=2.5.3-r1 \
+        ruby@edge=2.5.3-r1 \
         zlib=1.2.11-r1 \
     \
     && git clone --branch 0fa9216 --depth=1 \
