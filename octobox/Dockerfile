@@ -26,14 +26,14 @@ RUN \
         zlib-dev=1.2.11-r1 \
     \
     && apk add --no-cache \
-        apache2-utils=2.4.34-r0 \
+        apache2-utils=2.4.35-r0 \
         bzip2=1.0.6-r6 \
-        git=2.18.0-r0 \
+        git=2.18.1-r0 \
         libsass=3.5.4-r0 \
-        libxml2=2.9.8-r0 \
+        libxml2=2.9.8-r1 \
         libxslt=1.1.32-r0 \
-        nginx=1.14.0-r1 \
-        nodejs=8.11.4-r0 \
+        nginx=1.14.2-r0 \
+        nodejs=8.14.0-r0 \
         postgresql-contrib=10.5-r0 \
         postgresql=10.5-r0 \
         ruby-bigdecimal=2.5.3-r1 \
