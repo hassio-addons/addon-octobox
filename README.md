@@ -425,7 +425,7 @@ SOFTWARE.
 [microbadger]: https://microbadger.com/images/hassioaddons/octobox
 [patreon-shield]: https://www.frenck.nl/images/patreon.png
 [patreon]: https://www.patreon.com/frenck
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-%20!%20DEPRECATED%20%20%20!-ff0000.svg
 [pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/octobox.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-octobox.svg
